@@ -14,7 +14,7 @@ public class ScRepository implements IDao<Sc>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("insert into sc(sno,cno,grade) values('%s','%s','%lf')",t.getSno(), t.getCno(), t.getGrade());
+            String sql = String.format("insert into sc(sno,cno,grade) values('%s','%s','%f')",t.getSno(), t.getCno(), t.getGrade());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -35,6 +35,7 @@ public class ScRepository implements IDao<Sc>{
             ResultSet rs = state.executeQuery(sql);
             while(rs.next()){
                 Sc sc =new Sc();
+                sc.setScid(rs.getInt("scid"));
                 sc.setSno(rs.getString("sno"));
                 sc.setCno(rs.getString("cno"));
                 sc.setGrade(rs.getDouble("grade"));
@@ -51,11 +52,11 @@ public class ScRepository implements IDao<Sc>{
         return null;
     }
 
-    public boolean Updata(Sc oldt, Sc newt) {
+    public boolean Updata(Sc oldt, Sc newt){
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("update sc set grade='%lf where sno ='%s'and cno ='%s'",newt.getGrade(),newt.getSno(),oldt.getCno());
+            String sql = String.format("update sc set sno='%s' ,cno='%s' ,grade='%f where scid=%d",newt.getSno(),newt.getCno(),newt.getGrade(),oldt.getScid());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -71,7 +72,7 @@ public class ScRepository implements IDao<Sc>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("delete from sc where sno ='%s' and cno ='%s'",t.getSno(),t.getCno());
+            String sql = String.format("delete from sc where scid =%d",t.getScid());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -84,16 +85,14 @@ public class ScRepository implements IDao<Sc>{
     }
 
     public Sc getById(String id) {
-        return null;
-    }
-    public Sc getByStudentIdCourseId(String sid,String cid) {
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from sc where sno ='%s'and cno ='%s'",sid,cid);
+            String sql = String.format("selete * from sc where scid =%d",Integer.parseInt(id));
             ResultSet rs = state.executeQuery(sql);
-            if(rs!=null){
+            if(rs.next()){
                 Sc sc =new Sc();
+                sc.setScid(rs.getInt("scid"));
                 sc.setSno(rs.getString("sno"));
                 sc.setCno(rs.getString("cno"));
                 sc.setGrade(rs.getDouble("grade"));

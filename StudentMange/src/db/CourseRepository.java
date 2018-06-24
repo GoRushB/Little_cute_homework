@@ -14,7 +14,7 @@ public class CourseRepository implements IDao<Course>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("insert into course(cno,cname,cprior) values('%s','%s',%lf)",t.getCno(), t.getCname(), t.getCprior());
+            String sql = String.format("insert into course(cno,cname,cprior) values('%s','%s',%l)",t.getCno(), t.getCname(), t.getCprior());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -55,7 +55,7 @@ public class CourseRepository implements IDao<Course>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("update course set cname='%s',cprior='%lf where cno ='%s'",newt.getCname(),newt.getCprior(),oldt.getCno());
+            String sql = String.format("update course set cname='%s',cprior='%f where cno ='%s'",newt.getCname(),newt.getCprior(),oldt.getCno());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -89,7 +89,7 @@ public class CourseRepository implements IDao<Course>{
             Statement state = conn.createStatement();
             String sql = String.format("selete * from course where cno ='%s'",id);
             ResultSet rs = state.executeQuery(sql);
-            if(rs!=null){
+            if(rs.next()){
                 Course co =new Course();
                 co.setCno(rs.getString("cno"));
                 co.setCname(rs.getString("cname"));

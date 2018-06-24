@@ -88,7 +88,7 @@ public class StudentRepository implements IDao<Student> {
             Statement state = conn.createStatement();
             String sql = String.format("selete * from student where sno ='%s'",id);
             ResultSet rs = state.executeQuery(sql);
-            if(rs!=null){
+            if(rs.next()){
                Student st =new Student();
                 st.setSno(rs.getString("sno"));
                 st.setSname(rs.getString("sname"));

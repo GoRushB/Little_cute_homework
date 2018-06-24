@@ -2,10 +2,19 @@ package db;
 
 
 public class Sc {
+	private int scid;
     private String sno;
     private String cno;
     private double grade;
 
+    public int getScid() {
+        return scid;
+    }
+    
+    public void setScid(int scid) {
+        this.scid = scid;
+    }
+    
     public String getSno() {
         return sno;
     }
