@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import db.Student;
 import db.StudentRepository;
 import display.AddStudent;
+import display.DisplayGradeByStudent;
 import display.DisplayStudent;
 import display.EditStudent;
 import generic.CommonVariables;
@@ -69,6 +70,13 @@ public class DisplayStudentLogic {
 	public void OpenEditStudent(){
 		EditStudent frame = new EditStudent();
 		frame.setBounds(100,50,500,350);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+	}
+
+	public void OpenDisplayGradeByStudent() {
+		DisplayGradeByStudent frame = new DisplayGradeByStudent();
+		frame.setBounds(100,50,500,600);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 	}

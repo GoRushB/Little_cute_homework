@@ -30,7 +30,7 @@ public class StudentRepository implements IDao<Student> {
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from student  ");
+            String sql = String.format("selete * from student ");
             ResultSet rs = state.executeQuery(sql);
             while(rs.next()){
                 Student st =new Student();

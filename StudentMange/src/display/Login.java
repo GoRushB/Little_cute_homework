@@ -26,7 +26,7 @@ public class Login extends JFrame{
 		getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("\u767B\u9646\u5BC6\u7801:");
-		lblNewLabel_2.setBounds(131, 140, 54, 15);
+		lblNewLabel_2.setBounds(131, 140, 66, 15);
 		getContentPane().add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("\u767B\u9646");

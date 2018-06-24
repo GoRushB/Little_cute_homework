@@ -10,7 +10,7 @@ public class LoginLogic {
 			Welcome welcome=new Welcome();
 			welcome.setBounds(100,50,500,350);
 			welcome.setVisible(true);
-			welcome.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+			welcome.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		}
 	}
 }

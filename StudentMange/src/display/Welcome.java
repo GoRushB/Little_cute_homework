@@ -23,10 +23,22 @@ public class Welcome extends JFrame{
 		getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("\u8BFE\u7A0B\u7BA1\u7406");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				WelcomeLogic wl = new WelcomeLogic();
+				wl.OpenDisplayCourse();
+			}
+		});
 		btnNewButton_1.setBounds(120, 113, 198, 23);
 		getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("\u9009\u8BFE\u7BA1\u7406");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				WelcomeLogic wl = new WelcomeLogic();
+				wl.OpenDisplaySc();
+			}
+		});
 		btnNewButton_2.setBounds(120, 182, 198, 23);
 		getContentPane().add(btnNewButton_2);
 	}

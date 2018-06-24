@@ -31,7 +31,7 @@ public class CourseRepository implements IDao<Course>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from course  ");
+            String sql = String.format("selete * from course ");
             ResultSet rs = state.executeQuery(sql);
             while(rs.next()){
                 Course co =new Course();

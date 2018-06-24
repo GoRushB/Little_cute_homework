@@ -31,7 +31,7 @@ public class ScRepository implements IDao<Sc>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from sc  ");
+            String sql = String.format("selete * from sc ");
             ResultSet rs = state.executeQuery(sql);
             while(rs.next()){
                 Sc sc =new Sc();

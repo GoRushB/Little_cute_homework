@@ -48,7 +48,7 @@ public class DisplayStudent extends JFrame{
 		JButton button_1 = new JButton("\u65B0\u589E\u5B66\u751F");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				logic.OpenAddStudent();
 			}
 		});
 		button_1.setBounds(112, 265, 88, 23);
@@ -64,6 +64,11 @@ public class DisplayStudent extends JFrame{
 		getContentPane().add(button_2);
 		
 		JButton button_3 = new JButton("\u663E\u793A\u6210\u7EE9");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				logic.OpenDisplayGradeByStudent();
+			}
+		});
 		button_3.setBounds(308, 265, 88, 23);
 		getContentPane().add(button_3);
 		

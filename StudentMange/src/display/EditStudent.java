@@ -18,7 +18,7 @@ public class EditStudent extends JFrame{
 	public EditStudent() {
 		getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("\u4FEE\u6539\u5B66\u53F7");
+		JLabel lblNewLabel = new JLabel("\u5B66\u53F7");
 		lblNewLabel.setBounds(87, 67, 54, 15);
 		getContentPane().add(lblNewLabel);
 		
