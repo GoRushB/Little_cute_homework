@@ -99,6 +99,7 @@ public class EditValkyries extends JFrame{
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				logic.Edit(
+						txtno.getText(),
 						txtname.getText(),
 						txtratings.getText(),
 						Integer.parseInt(txtlevel.getText()),
@@ -118,7 +119,7 @@ public class EditValkyries extends JFrame{
 		JButton button_2 = new JButton("\u5220\u9664");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				logic.Delete();
+				logic.Delete(txtno.getText());
 			}
 		});
 		button_2.setBounds(228, 444, 93, 23);
