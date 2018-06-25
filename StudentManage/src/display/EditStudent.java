@@ -23,11 +23,11 @@ public class EditStudent extends JFrame{
 		getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("\u4FEE\u6539\u5B66\u751F\u59D3\u540D");
-		lblNewLabel_1.setBounds(87, 126, 72, 15);
+		lblNewLabel_1.setBounds(87, 116, 88, 34);
 		getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("\u4FEE\u6539\u5B66\u751F\u5E74\u9F84");
-		lblNewLabel_2.setBounds(87, 184, 72, 15);
+		lblNewLabel_2.setBounds(87, 174, 88, 34);
 		getContentPane().add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("\u4FEE\u6539");
@@ -36,11 +36,11 @@ public class EditStudent extends JFrame{
 				editStudentLogic.Edit(txtStuSname.getText(), Integer.parseInt(txtStuSage.getText()));
 			}
 		});
-		btnNewButton.setBounds(113, 255, 93, 23);
+		btnNewButton.setBounds(87, 253, 93, 23);
 		getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("\u91CD\u7F6E");
-		btnNewButton_1.setBounds(327, 255, 93, 23);
+		btnNewButton_1.setBounds(301, 253, 93, 23);
 		getContentPane().add(btnNewButton_1);
 		
 		txtStuSno = new JTextField();
@@ -64,7 +64,7 @@ public class EditStudent extends JFrame{
 				editStudentLogic.Delete();
 			}
 		});
-		button.setBounds(216, 255, 93, 23);
+		button.setBounds(190, 253, 93, 23);
 		getContentPane().add(button);
 		editStudentLogic = new EditStudentLogic(this);
 		editStudentLogic.init();

@@ -19,15 +19,15 @@ public class AddCourse extends JFrame{
 		getContentPane().setLayout(null);
 		
 		JLabel label = new JLabel("\u65B0\u589E\u7F16\u53F7");
-		label.setBounds(101, 56, 54, 15);
+		label.setBounds(104, 49, 72, 29);
 		getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("\u65B0\u589E\u8BFE\u7A0B\u540D\u79F0");
-		label_1.setBounds(101, 115, 72, 15);
+		label_1.setBounds(101, 108, 88, 29);
 		getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("\u65B0\u589E\u8BFE\u7A0B\u5B66\u5206");
-		label_2.setBounds(101, 173, 72, 15);
+		label_2.setBounds(101, 166, 88, 29);
 		getContentPane().add(label_2);
 		
 		JButton button = new JButton("\u65B0\u589E");

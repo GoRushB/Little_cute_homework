@@ -8,6 +8,7 @@ import logic.DisplayGradeByStudentLogic;
 
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
+import javax.swing.ListSelectionModel;
 
 public class DisplayGradeByStudent extends JFrame{
 	public JTextField txtSname;
@@ -46,8 +47,10 @@ public class DisplayGradeByStudent extends JFrame{
 		getContentPane().add(txtSage);
 		
 		courses = new JList();
+		courses.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		courses.setToolTipText("");
 		courses.setModel(new AbstractListModel() {
-			String[] values = new String[] {"      \u8BFE\u7A0B\u7F16\u53F7        \u8BFE\u7A0B\u540D\u79F0         \u5B66\u5206          \u6210\u7EE9"};
+			String[] values = new String[] {"\u8BFE\u7A0B\u7F16\u53F7        \u8BFE\u7A0B\u540D\u79F0                     \u5B66\u5206          \u6210\u7EE9"};
 			public int getSize() {
 				return values.length;
 			}
@@ -55,7 +58,8 @@ public class DisplayGradeByStudent extends JFrame{
 				return values[index];
 			}
 		});
-		courses.setBounds(29, 111, 419, 424);
+		courses.setSelectedIndex(0);
+		courses.setBounds(34, 103, 419, 424);
 		getContentPane().add(courses);
 		logic = new DisplayGradeByStudentLogic(this);
 		logic.init();

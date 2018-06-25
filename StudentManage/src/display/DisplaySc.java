@@ -20,30 +20,30 @@ public class DisplaySc extends JFrame{
 		getContentPane().setLayout(null);
 		
 		JLabel label = new JLabel("\u5B66\u751F\u5B66\u53F7");
-		label.setBounds(70, 91, 54, 15);
+		label.setBounds(77, 73, 54, 15);
 		getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("\u8BFE\u7A0B\u7F16\u53F7");
-		label_1.setBounds(70, 143, 54, 15);
+		label_1.setBounds(77, 125, 54, 15);
 		getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("\u8BFE\u7A0B\u6210\u7EE9");
-		label_2.setBounds(70, 193, 54, 15);
+		label_2.setBounds(77, 175, 54, 15);
 		getContentPane().add(label_2);
 		
 		txtScSno = new JTextField();
 		txtScSno.setColumns(10);
-		txtScSno.setBounds(193, 88, 196, 21);
+		txtScSno.setBounds(200, 70, 196, 21);
 		getContentPane().add(txtScSno);
 		
 		txtScCno = new JTextField();
 		txtScCno.setColumns(10);
-		txtScCno.setBounds(193, 140, 196, 21);
+		txtScCno.setBounds(200, 122, 196, 21);
 		getContentPane().add(txtScCno);
 		
 		txtScGrade = new JTextField();
 		txtScGrade.setColumns(10);
-		txtScGrade.setBounds(193, 190, 196, 21);
+		txtScGrade.setBounds(200, 172, 196, 21);
 		getContentPane().add(txtScGrade);
 		
 		JButton button = new JButton("\u65B0\u589E\u6210\u7EE9\u5355");
@@ -52,7 +52,7 @@ public class DisplaySc extends JFrame{
 				logic.OpenAddSc();
 			}
 		});
-		button.setBounds(276, 265, 103, 23);
+		button.setBounds(124, 268, 123, 23);
 		getContentPane().add(button);
 		
 		JButton button_1 = new JButton("\u4FEE\u6539\u6210\u7EE9\u5355");
@@ -61,7 +61,7 @@ public class DisplaySc extends JFrame{
 				logic.OpenEditSc();
 			}
 		});
-		button_1.setBounds(379, 265, 98, 23);
+		button_1.setBounds(268, 268, 116, 23);
 		getContentPane().add(button_1);
 		
 		JButton button_2 = new JButton("\u4E0B\u4E00\u6761");
@@ -70,7 +70,7 @@ public class DisplaySc extends JFrame{
 				logic.next();
 			}
 		});
-		button_2.setBounds(94, 265, 74, 23);
+		button_2.setBounds(212, 222, 74, 23);
 		getContentPane().add(button_2);
 		
 		JButton button_3 = new JButton("\u4E0A\u4E00\u6761");
@@ -79,7 +79,7 @@ public class DisplaySc extends JFrame{
 				logic.previous();
 			}
 		});
-		button_3.setBounds(10, 265, 74, 23);
+		button_3.setBounds(126, 222, 76, 23);
 		getContentPane().add(button_3);
 		
 		JButton button_4 = new JButton("\u5237\u65B0\u6570\u636E");
@@ -88,16 +88,16 @@ public class DisplaySc extends JFrame{
 				logic.refresh();
 			}
 		});
-		button_4.setBounds(178, 265, 88, 23);
+		button_4.setBounds(296, 222, 88, 23);
 		getContentPane().add(button_4);
 		
 		JLabel label_3 = new JLabel("\u6210\u7EE9\u5355\u7F16\u53F7");
-		label_3.setBounds(70, 41, 74, 15);
+		label_3.setBounds(77, 23, 74, 15);
 		getContentPane().add(label_3);
 		
 		txtScScid = new JTextField();
 		txtScScid.setColumns(10);
-		txtScScid.setBounds(193, 38, 196, 21);
+		txtScScid.setBounds(200, 20, 196, 21);
 		getContentPane().add(txtScScid);
 		logic = new DisplayScLogic(this);
 		logic.init();

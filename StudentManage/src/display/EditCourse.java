@@ -23,11 +23,11 @@ public class EditCourse extends JFrame{
 		getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("\u4FEE\u6539\u8BFE\u7A0B\u540D\u79F0");
-		label_1.setBounds(85, 106, 72, 15);
+		label_1.setBounds(85, 98, 93, 30);
 		getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("\u4FEE\u6539\u8BFE\u7A0B\u5B66\u5206");
-		label_2.setBounds(85, 164, 72, 15);
+		label_2.setBounds(85, 156, 93, 30);
 		getContentPane().add(label_2);
 		
 		JButton button = new JButton("\u4FEE\u6539");
@@ -36,11 +36,11 @@ public class EditCourse extends JFrame{
 				editCourseLogic.Edit(txtCouCname.getText(), Double.parseDouble(txtCouCprior.getText()));
 			}
 		});
-		button.setBounds(111, 235, 93, 23);
+		button.setBounds(85, 234, 93, 23);
 		getContentPane().add(button);
 		
 		JButton button_1 = new JButton("\u91CD\u7F6E");
-		button_1.setBounds(325, 235, 93, 23);
+		button_1.setBounds(299, 234, 93, 23);
 		getContentPane().add(button_1);
 		
 		txtCouCno = new JTextField();
@@ -64,7 +64,7 @@ public class EditCourse extends JFrame{
 				editCourseLogic.Delete();
 			}
 		});
-		button_2.setBounds(214, 235, 93, 23);
+		button_2.setBounds(188, 234, 93, 23);
 		getContentPane().add(button_2);
 		editCourseLogic = new EditCourseLogic(this);
 		editCourseLogic.init();

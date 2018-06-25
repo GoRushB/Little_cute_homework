@@ -33,15 +33,15 @@ public class AddSc extends JFrame{
 		getContentPane().add(button_1);
 		
 		JLabel label = new JLabel("\u65B0\u589E\u5B66\u751F\u5B66\u53F7");
-		label.setBounds(82, 90, 93, 15);
+		label.setBounds(82, 83, 113, 29);
 		getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("\u65B0\u589E\u8BFE\u7A0B\u7F16\u53F7");
-		label_1.setBounds(82, 142, 80, 15);
+		label_1.setBounds(82, 129, 113, 40);
 		getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("\u65B0\u589E\u8BFE\u7A0B\u6210\u7EE9");
-		label_2.setBounds(82, 192, 80, 15);
+		label_2.setBounds(82, 179, 113, 29);
 		getContentPane().add(label_2);
 		
 		txtScSno = new JTextField();
@@ -60,7 +60,7 @@ public class AddSc extends JFrame{
 		getContentPane().add(txtScGrade);
 		
 		JLabel label_3 = new JLabel("\u65B0\u589E\u6210\u7EE9\u5355\u7F16\u53F7");
-		label_3.setBounds(82, 40, 93, 15);
+		label_3.setBounds(82, 40, 113, 29);
 		getContentPane().add(label_3);
 		
 		txtScScid = new JTextField();
