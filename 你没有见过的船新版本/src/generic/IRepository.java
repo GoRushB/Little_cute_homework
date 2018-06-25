@@ -2,11 +2,11 @@ package generic;
 
 import java.util.ArrayList;
 
-public interface IRepository {
+public interface IRepository<T> {
 	boolean IsExisted(Object identifier);
 	void Remove(Object identifier);
 	void Create(Object identifier);
-	Object Save(Object entity);
-	Object FindOne(Object identifier);
-	ArrayList<Object> FindAll();
+	T Save(T entity);
+	T FindOne(Object identifier);
+	ArrayList<T> FindAll();
 }

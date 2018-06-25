@@ -9,7 +9,7 @@ import db.Map.ValkyriesMap;
 import generic.IRepository;
 import generic.Help.VisitDb;
 
-public class ValkyriesRepository implements IRepository{
+public class ValkyriesRepository implements IRepository<Valkyries>{
 
 	public boolean IsExisted(Object identifier) {
 		if(FindOne(identifier) == null)
@@ -23,16 +23,15 @@ public class ValkyriesRepository implements IRepository{
 		VisitDb.Close();
 	}
 
-	public Object Save(Object entity) {
-		Valkyries v = (Valkyries) entity;
+	public Valkyries Save(Valkyries entity) {
 		VisitDb.Establish();
 		VisitDb.ExecuteInvoke(ValkyriesMap.Edit(
-				v.No, v.Name, v.Ratings, v.Level, v.Weapon, v.UpperStigmata, v.CentreStigmata, v.LowerStigmata));
+				entity.No, entity.Name, entity.Ratings, entity.Level, entity.Weapon, entity.UpperStigmata, entity.CentreStigmata, entity.LowerStigmata));
 		VisitDb.Close();
-		return v;
+		return entity;
 	}
 
-	public Object FindOne(Object identifier) {
+	public Valkyries FindOne(Object identifier) {
 		VisitDb.Establish();
 		ResultSet rs = VisitDb.ExecuteQueryInvoke(ValkyriesMap.Get((String)identifier));
 		try {
@@ -57,7 +56,7 @@ public class ValkyriesRepository implements IRepository{
 		return null;
 	}
 
-	public ArrayList<Object> FindAll() {
+	public ArrayList<Valkyries> FindAll() {
         ArrayList<Valkyries> arrs = new ArrayList<>();
 		VisitDb.Establish();
 		ResultSet rs = VisitDb.ExecuteQueryInvoke(ValkyriesMap.GetAll());
@@ -73,6 +72,7 @@ public class ValkyriesRepository implements IRepository{
 			    v.LowerStigmata=(rs.getString("lowerStigmata"));
 			    arrs.add(v);
 			}
+			return arrs;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

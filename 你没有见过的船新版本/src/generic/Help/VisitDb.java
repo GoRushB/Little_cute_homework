@@ -55,8 +55,8 @@ public class VisitDb {
     }
     public static void Close(){
     	try {
-			conn.close();
 	    	state.close();
+			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

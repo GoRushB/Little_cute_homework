@@ -55,6 +55,7 @@ public class DisplayValkyriesLogic {
 	public void refresh(){
 		valkyries.clear();
 		valkyries = service.GetAll();
+		output();
 	}
 	
 	public void OpenAddCourse(){

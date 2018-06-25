@@ -21,7 +21,8 @@ public class AddValkyriesLogic {
 			.Weapon(weapon)
 			.UpperStigmata(upperStigmata)
 			.CentreStigmata(centreStigmata)
-			.LowerStigmata(lowerStigmata);
+			.LowerStigmata(lowerStigmata)
+			.Save();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

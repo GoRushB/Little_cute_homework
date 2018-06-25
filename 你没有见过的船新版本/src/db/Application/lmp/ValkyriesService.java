@@ -32,12 +32,7 @@ public class ValkyriesService implements IValkyriesService{
 	}
 
 	public ArrayList<Valkyries> GetAll() {
-		ArrayList<Valkyries> items = new ArrayList<>();
-		ArrayList<Object> list = repository.FindAll();
-		for(Object item :list){
-			items.add((Valkyries)item);
-		}
-		return items;
+		return repository.FindAll();
 	}
 
 	public IValkyriesCommand Edit(String no) throws Exception {

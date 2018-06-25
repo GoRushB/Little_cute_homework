@@ -2,7 +2,7 @@ package db.Map;
 
 public class ValkyriesMap {
 	public static String Create(String no){
-		return String.format("insert into valkyries(no,name,ratings,level,weapon,upperStigmata,centreStigmata,lowerStigmata) values('%s',\"\",\"\",1,\"\",\"\",\"\",\"\",)",no);
+		return String.format("insert into valkyries(no,name,ratings,level,weapon,upperStigmata,centreStigmata,lowerStigmata) values('%s','默认','默认',1,'默认','默认','默认','默认')",no);
 	}
 	
 	public static String Delete(String no){
