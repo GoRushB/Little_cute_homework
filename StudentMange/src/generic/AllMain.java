@@ -2,8 +2,6 @@ package generic;
 
 import javax.swing.JFrame;
 
-import db.Student;
-import db.StudentRepository;
 import display.Login;
 
 public class AllMain {

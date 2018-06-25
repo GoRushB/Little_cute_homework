@@ -13,6 +13,7 @@ public class DisplayGradeByStudent extends JFrame{
 	public JTextField txtSname;
 	public JTextField txtSno;
 	public JTextField txtSage;
+	public JList courses;
 	private DisplayGradeByStudentLogic logic;
 	public DisplayGradeByStudent() {
 		getContentPane().setLayout(null);
@@ -44,7 +45,7 @@ public class DisplayGradeByStudent extends JFrame{
 		txtSage.setBounds(202, 72, 196, 21);
 		getContentPane().add(txtSage);
 		
-		public JList courses = new JList();
+		courses = new JList();
 		courses.setModel(new AbstractListModel() {
 			String[] values = new String[] {"      \u8BFE\u7A0B\u7F16\u53F7        \u8BFE\u7A0B\u540D\u79F0         \u5B66\u5206          \u6210\u7EE9"};
 			public int getSize() {
