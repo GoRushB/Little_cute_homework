@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import db.Domain.Valkyries;
 import generic.IDao;
 import generic.VisitDb;
 

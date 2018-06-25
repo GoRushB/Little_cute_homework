@@ -1,7 +1,7 @@
 package logic;
 
-import db.Valkyries;
 import db.ValkyriesRepository;
+import db.Domain.Valkyries;
 import display.AddValkyries;
 
 public class AddValkyriesLogic {

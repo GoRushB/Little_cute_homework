@@ -2,8 +2,8 @@ package logic;
 
 import java.util.ArrayList;
 
-import db.Valkyries;
 import db.ValkyriesRepository;
+import db.Domain.Valkyries;
 import display.EditValkyries;
 import generic.CommonVariables;
 
