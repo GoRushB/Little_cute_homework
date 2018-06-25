@@ -5,7 +5,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import db.Domain.Valkyries;
 import generic.IDao;
 import generic.VisitDb;
 
@@ -32,7 +31,7 @@ public class ValkyriesRepository implements IDao<Valkyries>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from valkyries ");
+            String sql = String.format("select * from valkyries ");
             ResultSet rs = state.executeQuery(sql);
             while(rs.next()){
             	Valkyries v =new Valkyries();
@@ -94,7 +93,7 @@ public class ValkyriesRepository implements IDao<Valkyries>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from valkyries where no ='%s'",id);
+            String sql = String.format("select * from valkyries where no ='%s'",id);
             ResultSet rs = state.executeQuery(sql);
             if(rs.next()){
             	Valkyries v =new Valkyries();

@@ -2,8 +2,8 @@ package logic;
 
 import java.util.ArrayList;
 
+import db.Valkyries;
 import db.ValkyriesRepository;
-import db.Domain.Valkyries;
 import display.EditValkyries;
 import generic.CommonVariables;
 
@@ -12,6 +12,7 @@ public class EditValkyriesLogic {
 	ValkyriesRepository vr;
 	public EditValkyriesLogic(EditValkyries editValkyries) {
 		this.editValkyries = editValkyries;
+		vr = new ValkyriesRepository();
 	}
 	public void init(){
 		ArrayList<Valkyries> arrs = vr.Retrieve();

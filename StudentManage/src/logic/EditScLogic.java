@@ -12,6 +12,7 @@ public class EditScLogic {
 	ScRepository sr;
 	public EditScLogic(EditSc editSc) {
 		this.editSc = editSc;
+		sr = new ScRepository();
 	}
 	public void init(){
 		ArrayList<Sc> arrs = sr.Retrieve();

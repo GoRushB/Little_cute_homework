@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
+import db.Valkyries;
 import db.ValkyriesRepository;
-import db.Domain.Valkyries;
 import display.AddValkyries;
 import display.DisplayValkyries;
 import display.EditValkyries;

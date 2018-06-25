@@ -12,6 +12,7 @@ public class EditStudentLogic {
 	StudentRepository sr;
 	public EditStudentLogic(EditStudent editStudent) {
 		this.editStudent = editStudent;
+		sr = new StudentRepository();
 	}
 	public void init(){
 		ArrayList<Student> arrs = sr.Retrieve();

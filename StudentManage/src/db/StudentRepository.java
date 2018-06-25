@@ -13,7 +13,7 @@ public class StudentRepository implements IDao<Student> {
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("insert into student(sno,sname,sage) values('%s','%s','%d')",t.getSno(), t.getSname(), t.getSage());
+            String sql = String.format("insert into student(sno,sname,sage) values('%s','%s',%d)",t.getSno(), t.getSname(), t.getSage());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -30,7 +30,7 @@ public class StudentRepository implements IDao<Student> {
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from student ");
+            String sql = String.format("select * from student ");
             ResultSet rs = state.executeQuery(sql);
             while(rs.next()){
                 Student st =new Student();
@@ -54,7 +54,7 @@ public class StudentRepository implements IDao<Student> {
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("update student set sname='%s',sage='%d where sno ='%s'",newt.getSname(),newt.getSage(),oldt.getSno());
+            String sql = String.format("update student set sname='%s',sage=%d where sno ='%s'",newt.getSname(),newt.getSage(),oldt.getSno());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -86,7 +86,7 @@ public class StudentRepository implements IDao<Student> {
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from student where sno ='%s'",id);
+            String sql = String.format("select * from student where sno ='%s'",id);
             ResultSet rs = state.executeQuery(sql);
             if(rs.next()){
                Student st =new Student();

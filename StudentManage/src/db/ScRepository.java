@@ -14,7 +14,7 @@ public class ScRepository implements IDao<Sc>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("insert into sc(sno,cno,grade) values('%s','%s','%f')",t.getSno(), t.getCno(), t.getGrade());
+            String sql = String.format("insert into sc(sno,cno,grade) values('%s','%s',%f)",t.getSno(), t.getCno(), t.getGrade());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -31,7 +31,7 @@ public class ScRepository implements IDao<Sc>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from sc ");
+            String sql = String.format("select * from sc ");
             ResultSet rs = state.executeQuery(sql);
             while(rs.next()){
                 Sc sc =new Sc();
@@ -56,7 +56,7 @@ public class ScRepository implements IDao<Sc>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("update sc set sno='%s' ,cno='%s' ,grade='%f where scid=%d",newt.getSno(),newt.getCno(),newt.getGrade(),oldt.getScid());
+            String sql = String.format("update sc set sno='%s' ,cno='%s' ,grade=%f where scid=%d",newt.getSno(),newt.getCno(),newt.getGrade(),oldt.getScid());
             boolean b =state.execute(sql);
             state.close();
             conn.close();
@@ -88,7 +88,7 @@ public class ScRepository implements IDao<Sc>{
         try{
             Connection conn = VisitDb.getDBconn().getConn();
             Statement state = conn.createStatement();
-            String sql = String.format("selete * from sc where scid =%d",Integer.parseInt(id));
+            String sql = String.format("select * from sc where scid =%d",Integer.parseInt(id));
             ResultSet rs = state.executeQuery(sql);
             if(rs.next()){
                 Sc sc =new Sc();

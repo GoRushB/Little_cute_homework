@@ -1,4 +1,4 @@
-package db.Domain;
+package db;
 
 public class Valkyries {
 	private String no;
