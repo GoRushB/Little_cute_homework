@@ -1,9 +1,8 @@
 package db.Map;
 
 public class ValkyriesMap {
-	public static String Create(String no,String name,String ratings,int level,String weapon,String upperStigmata,String centreStigmata,String lowerStigmata){
-		return String.format("insert into valkyries(no,name,ratings,level,weapon,upperStigmata,centreStigmata,lowerStigmata) values('%s','%s','%s',%d,'%s','%s','%s','%s')",
-				no,name,ratings,level,weapon,upperStigmata,centreStigmata,lowerStigmata);
+	public static String Create(String no){
+		return String.format("insert into valkyries(no,name,ratings,level,weapon,upperStigmata,centreStigmata,lowerStigmata) values('%s',\"\",\"\",1,\"\",\"\",\"\",\"\",)",no);
 	}
 	
 	public static String Delete(String no){

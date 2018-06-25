@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import db.Domain.Valkyries;
 import db.Map.ValkyriesMap;
 import generic.IRepository;
-import generic.VisitDb;
+import generic.Help.VisitDb;
 
 public class ValkyriesRepository implements IRepository{
 
@@ -83,5 +83,11 @@ public class ValkyriesRepository implements IRepository{
 		}
 		VisitDb.Close();
 		return null;
+	}
+
+	public void Create(Object identifier) {
+		VisitDb.Establish();
+		VisitDb.ExecuteInvoke(ValkyriesMap.Create((String)identifier));
+		VisitDb.Close();
 	}	
 }

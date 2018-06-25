@@ -1,4 +1,4 @@
-package generic;
+package generic.Help;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

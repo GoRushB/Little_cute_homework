@@ -17,6 +17,7 @@ public class ValkyriesService implements IValkyriesService{
 		if(repository.IsExisted(no))
 			throw new Exception("女武神已存在");
 		Valkyries entity = new Valkyries(no);
+		repository.Create(no);
 		return new ValkyriesCommand(entity,repository);
 	}
 
@@ -30,8 +31,13 @@ public class ValkyriesService implements IValkyriesService{
 		return (Valkyries) repository.FindOne(id);
 	}
 
-	public ArrayList<Object> GetAll() {		
-		return repository.FindAll();
+	public ArrayList<Valkyries> GetAll() {
+		ArrayList<Valkyries> items = new ArrayList<>();
+		ArrayList<Object> list = repository.FindAll();
+		for(Object item :list){
+			items.add((Valkyries)item);
+		}
+		return items;
 	}
 
 	public IValkyriesCommand Edit(String no) throws Exception {
