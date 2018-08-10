@@ -1,0 +1,14 @@
+[ERROR] 2018-08-06 09:59:11,435           ylz.wx.util.MenuUtil 创建菜单失败 errcode:40023 errmsg:invalid sub button size hint: [VGqKTa07503125]
+[INFO ] 2018-08-06 09:59:11,435        ylz.wx.menu.MenuManager 菜单创建失败
+[ERROR] 2018-08-06 10:00:53,857           ylz.wx.util.MenuUtil 创建菜单失败 errcode:40023 errmsg:invalid sub button size hint: [yKbLCa08523126]
+[INFO ] 2018-08-06 10:00:57,453        ylz.wx.menu.MenuManager 菜单创建失败
+[ERROR] 2018-08-06 10:02:27,249           ylz.wx.util.MenuUtil 创建菜单失败 errcode:40023 errmsg:invalid sub button size hint: [MAeWuA09461891]
+[INFO ] 2018-08-06 10:04:41,567        ylz.wx.menu.MenuManager 菜单创建成功
+[INFO ] 2018-08-06 10:27:33,918        ylz.wx.menu.MenuManager 菜单创建成功
+[INFO ] 2018-08-06 10:32:30,116        ylz.wx.menu.MenuManager 菜单创建成功
+[INFO ] 2018-08-06 10:37:14,909        ylz.wx.menu.MenuManager 菜单创建成功
+[INFO ] 2018-08-06 10:39:38,753        ylz.wx.menu.MenuManager 菜单创建成功
+[INFO ] 2018-08-06 11:02:41,357        ylz.wx.menu.MenuManager 菜单创建成功
+[INFO ] 2018-08-06 11:19:49,703        ylz.wx.menu.MenuManager 菜单创建成功
+[INFO ] 2018-08-06 11:38:36,187        ylz.wx.menu.MenuManager 菜单创建成功
+[INFO ] 2018-08-06 13:09:16,595        ylz.wx.menu.MenuManager 菜单创建成功

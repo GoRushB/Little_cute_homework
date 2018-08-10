@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>studentProject</display-name>
+
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>lps.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/jsp/Index</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MenuServlet</servlet-name>
+		<servlet-class>lps.servlet.MenuServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MenuServlet</servlet-name>
+		<url-pattern>/jsp/Menu</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StudentServlet</servlet-name>
+		<servlet-class>lps.servlet.StudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentServlet</servlet-name>
+		<url-pattern>/jsp/Student</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateStudentServlet</servlet-name>
+		<servlet-class>lps.servlet.CreateStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateStudentServlet</servlet-name>
+		<url-pattern>/jsp/CreateStudent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditStudentServlet</servlet-name>
+		<servlet-class>lps.servlet.EditStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditStudentServlet</servlet-name>
+		<url-pattern>/jsp/EditStudent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CourseServlet</servlet-name>
+		<servlet-class>lps.servlet.CourseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CourseServlet</servlet-name>
+		<url-pattern>/jsp/Course</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateCourseServlet</servlet-name>
+		<servlet-class>lps.servlet.CreateCourseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateCourseServlet</servlet-name>
+		<url-pattern>/jsp/CreateCourse</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditCourseServlet</servlet-name>
+		<servlet-class>lps.servlet.EditCourseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditCourseServlet</servlet-name>
+		<url-pattern>/jsp/EditCourse</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ScServlet</servlet-name>
+		<servlet-class>lps.servlet.ScServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ScServlet</servlet-name>
+		<url-pattern>/jsp/Sc</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateScServlet</servlet-name>
+		<servlet-class>lps.servlet.CreateScServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateScServlet</servlet-name>
+		<url-pattern>/jsp/CreateSc</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditScServlet</servlet-name>
+		<servlet-class>lps.servlet.EditScServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditScServlet</servlet-name>
+		<url-pattern>/jsp/EditSc</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>Index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
